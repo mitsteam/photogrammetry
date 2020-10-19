@@ -1,5 +1,6 @@
 ### Links
 alicevision docs: https://meshroom-manual.readthedocs.io
+nice tello SDK guide: https://github.com/dbaldwin/DroneBlocks-Tello-Python
 
 ### Hardware
 - [x] Tello drone

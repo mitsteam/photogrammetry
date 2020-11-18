@@ -34,6 +34,24 @@ def video():
     cap.release()
     cv2.destroyAllWindows()
 
-drone = tello.Tello()
-drone.send_command('streamon')
-video()
+
+def main():
+    while True:
+        k = cv2.waitKey(1)
+        if k == 87: # w
+            tello.left(0.1)
+        elif k == 65: # a
+            tello.left(0.1)
+        elif k == 83: # s
+            tello.left(0.1)
+        elif k == 68: # d
+            tello.left(0.1)
+        elif k == 27: # esc
+            tello.land()
+            break
+        
+if __name__ == "__main__":
+    drone = tello.Tello()
+    # drone.send_command('streamon')
+    # video
+    main()

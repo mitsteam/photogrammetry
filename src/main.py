@@ -39,13 +39,13 @@ def main():
     while True:
         k = cv2.waitKey(1)
         if k == 87: # w
-            tello.left(0.1)
+            tello.forward(0.1)
         elif k == 65: # a
             tello.left(0.1)
         elif k == 83: # s
-            tello.left(0.1)
+            tello.back(0.1)
         elif k == 68: # d
-            tello.left(0.1)
+            tello.right(0.1)
         elif k == 27: # esc
             tello.land()
             break

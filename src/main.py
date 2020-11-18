@@ -38,13 +38,13 @@ def video():
 def main():
     while True:
         k = cv2.waitKey(1)
-        if k == 87: # w
+        if k == 87 or k == 38: # w
             tello.forward(0.1)
-        elif k == 65: # a
+        elif k == 65 or k == 37: # a
             tello.left(0.1)
-        elif k == 83: # s
+        elif k == 83 or k == 40: # s
             tello.back(0.1)
-        elif k == 68: # d
+        elif k == 68 or k == 39: # d
             tello.right(0.1)
         elif k == 27: # esc
             tello.land()

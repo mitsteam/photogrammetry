@@ -1,22 +1,24 @@
 import cv2
 from easytello import tello
 import time
+import tkinter
 
-# mac camera cv2 test
-def mac_camera():
-    cap = cv2.VideoCapture(0)
+class Config:
+    def __init__(self):
+        self.dimesions = None
 
-    while True:
-        ret, frame = cap.read()
-        cv2.imshow('haha', frame)
-        cv2.imwrite('lol.png', frame)
+        self.root = tkinter.Tk()
+        tkinter.Button(self.root, text="Save", command=self.save_destroy)
+        self.root.mainloop()
+    
+    def save_destroy(self):
+        self.root.destroy()
 
-        k = cv2.waitKey(1) & 0xFF
-        if k == 27:
-            break
 
-    cap.release()
-    cv2.destroyAllWindows()
+
+
+def input_stuff():
+    t
 
 def video():
     # Creating stream capture object
@@ -35,5 +37,7 @@ def video():
     cv2.destroyAllWindows()
 
 drone = tello.Tello()
+flight_configs = Config()
 drone.send_command('streamon')
 video()
+

@@ -2,13 +2,13 @@ import cv2
 from easytello import tello
 import time
 
-def input_stuff() -> list:
+def input_stuff(self) -> list:
     print("Please input the dimensions of your object in cm below.")
 
-    width = int(input("Width: "))
-    height = int(input("Height: "))
+    self.width = int(input("Width: "))
+    self.height = int(input("Height: "))
 
-    return [width, height]
+    print("Done!")
  
 
 def video(self):
@@ -27,10 +27,13 @@ def video(self):
     cap.release()
     cv2.destroyAllWindows()
 
+def move_capture(self)
+
 drone = tello.Tello()
 setattr(drone, 'video', video)
+setattr(drone, 'input_stuff', input_stuff) 
 
-
+drone.input_stuff()
 drone.send_command('streamon')
 drone.video()
 
